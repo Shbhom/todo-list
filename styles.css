@@ -6,11 +6,12 @@
 
 body{
   min-height: 100vh;
-  background-color: cyan;
+  background-image: linear-gradient(to right,#c877fd,#8744fd) ;
 }
 
 header{
   font-size: 1.5rem;
+  color: white;
 }
 
 header,form{
@@ -23,7 +24,20 @@ header,form{
 form input, form button{
   padding: 0.5rem;
   font-size: 2rem;
-  background-color: white;
+  background-color: whitesmoke;
+  border: none;
+}
+
+form button{
+  color: #a7c957;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.3s ease-in ;
+}
+
+form button:hover{
+  background: #a7c957 ;
+  color: whitesmoke;
 }
 
 .todo-container{
@@ -44,10 +58,15 @@ form input, form button{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease;
 }
 
 .todo li{
   flex: 1;
+}
+
+.todo-item{
+  padding: 0rem 0.5rem;
 }
 
 .fa-trash,.fa-check{
@@ -58,4 +77,27 @@ form input, form button{
 .completed{
   text-decoration: line-through;
   opacity: 0.3;
+}
+
+.fall{
+  transform:  translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.complete-btn{
+  background:  #bc4749;
+  color: whitesmoke;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.delete-btn{
+  background-color: #6a994e ;
+  color: whitesmoke;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
 }
