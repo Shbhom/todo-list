@@ -15,8 +15,6 @@ function addTodo(event) {
   newTodo.classList.add('todo-item');
   todoDiv.appendChild(newTodo);
 
-  saveLocal(todoInput.value);
-
   const completedButton = document.createElement('button');
   completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add("complete-btn");
@@ -47,13 +45,3 @@ function deleteCheck(e) {
   }
 }
 
-function saveLocal(todo) {
-  let todos;
-  if (localStorage.getItem('todos') === null) {
-    todos = [];
-  }
-  else {
-    todo = JSON.parse(localStorage.getItem('todos'));
-  }
-  todos.push.setItem('todos', JSON.stringify(todos));
-}
